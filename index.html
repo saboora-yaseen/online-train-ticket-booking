@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Ticket Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🚆 RailBook Pro</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#book">Book Ticket</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Fast & Smart Train Ticket Booking</h1>
+    <p>Search, Book and Manage your train tickets easily</p>
+    <button onclick="scrollToBook()">Book Now</button>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="container" id="book">
+
+  <div class="form-box">
+    <input type="text" id="from" placeholder="From (e.g Lahore)">
+    <input type="text" id="to" placeholder="To (e.g Karachi)">
+    <input type="date" id="date">
+    <select id="class">
+      <option>Economy</option>
+      <option>Business</option>
+      <option>AC Sleeper</option>
+    </select>
+    <button onclick="searchTrains()">Search Trains</button>
+  </div>
+
+  <div class="results" id="results"></div>
+
+  <div class="ticket-box" id="ticketBox"></div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact Support</h2>
+  <form onsubmit="submitContact(event)">
+    <input type="text" id="cname" placeholder="Your Name" required>
+    <input type="email" id="cemail" placeholder="Email" required>
+    <textarea id="cmsg" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="contactMsg"></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
